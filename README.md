@@ -30,4 +30,9 @@ user.external = user_default_internal_regex_enabled? ? user_default_internal_reg
 # 如果没有配置 internal 正则，则 user.external = false
 ```
 
+----
+
+本 patch 适用于打在 docker container 内部路径的 `/opt/gitlab/embedded/service/gitlab-rails/lib/gitlab/auth/o_auth/user.rb` 这个文件上  
+由于 gitlab 官方镜像内部没有 patch 命令，所以可以将此文件 docker cp 出来、打 patch、再 cp 回去
+
 \- DONE -
